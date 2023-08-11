@@ -1,0 +1,189 @@
+em {
+  font-style: italic;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  /* Help prevent overflow of long words/names/URLs */
+  overflow-wrap: break-word;
+
+  /* Optional, not supported for all languages */
+  hyphens: auto;
+}
+
+svg {
+  width: 1.2rem;
+}
+
+.avatar {
+  width: 50px;
+  min-width: 50px;
+}
+
+.container {
+  display: grid;
+  padding: 1rem 0 0 clamp(1rem, 2%, 3rem);
+}
+
+body > .container {
+  grid-template-columns: 1fr 4fr;
+}
+
+aside {
+  display: grid;
+  place-content: start;
+  gap: 2rem;
+}
+
+aside h1 {
+  margin: 0;
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.3em;
+  place-items: center;
+}
+
+aside h1 svg {
+  width: 2.5rem;
+}
+
+aside ul li {
+  margin-bottom: 1em;
+
+  display: grid;
+  grid-auto-flow: column;
+  place-content: start;
+  gap: 1em;
+}
+
+header {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+
+.search {
+  padding-left: 1em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content;
+  gap: 1em;
+  align-items: center;
+}
+
+.search figure {
+  max-width: fit-content;
+}
+
+header .search input[type="search"] {
+  background-color: lightgray;
+  min-width: 100%;
+  height: 1.5em;
+  border-radius: 1rem;
+  justify-self: start;
+}
+
+header .profile {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
+
+header .profile svg {
+  justify-self: end;
+}
+
+header .profile h3 {
+  justify-self: start;
+}
+
+nav {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+nav .user-details {
+  padding: 1rem;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content;
+  gap: 1em;
+}
+
+nav .user-details .user-name {
+  display: grid;
+  gap: 0.3em;
+}
+
+nav .user-details .user-name p {
+  align-self: end;
+}
+
+nav .user-details .user-name h2 {
+  align-self: start;
+}
+
+nav .admin-buttons {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  place-content: center;
+  gap: 1em;
+}
+
+nav .admin-buttons button {
+  font-weight: bold;
+  padding: 0.5rem 1.4em;
+  color: white;
+  background-color: blue;
+  border-radius: 1em;
+}
+
+main > .container {
+  box-shadow: inset 0px 4px 3px 0px gray;
+  background-color: lightgrey;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+}
+
+.card {
+  padding: 1.5em;
+  background-color: white;
+  border-left: peachpuff solid .4em;
+  border-radius: .5em;
+  /* width: min(70ch, 100% - 2rem); */
+}
+
+.card h5 {
+  font-weight: bolder;
+}
+
+.card p {
+  color: gray;
+  font-size: .8rem;
+  font-weight: lighter;
+}
+
+.card .project-buttons {
+  margin-top: 1em;
+  text-align: right;
+}
+
+.card .project-buttons svg {
+  margin: 0 .6em;
+}
