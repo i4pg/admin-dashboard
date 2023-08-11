@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --blue: #1992d4;
+  --yellow: #f0b429;
+  --gray: #e2e8f0;
+  --dark-gray: #636363;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.container {
+  display: grid;
+  padding: 1rem clamp(1rem, 2%, 3rem);
+}
+
 em {
   font-style: italic;
 }
@@ -19,21 +39,18 @@ svg {
   width: 1.2rem;
 }
 
+aside svg{
+  fill:white
+}
+
 .avatar {
   width: 50px;
   min-width: 50px;
 }
 
-.container {
-  display: grid;
-  padding: 1rem 0 0 clamp(1rem, 2%, 3rem);
-}
-
-body > .container {
-  grid-template-columns: 1fr 4fr;
-}
-
 aside {
+  background-color: var(--blue);
+  color: white;
   display: grid;
   place-content: start;
   gap: 2rem;
@@ -46,6 +63,11 @@ aside h1 {
   grid-auto-flow: column;
   gap: 0.3em;
   place-items: center;
+}
+
+aside h1 p {
+  font-size: 1.6rem;
+  font-weight: bolder;
 }
 
 aside h1 svg {
@@ -81,7 +103,7 @@ header {
 }
 
 header .search input[type="search"] {
-  background-color: lightgray;
+  background-color: var(--gray);
   min-width: 100%;
   height: 1.5em;
   border-radius: 1rem;
@@ -103,6 +125,7 @@ header .profile h3 {
 }
 
 nav {
+  margin-left: 1.2em;
   display: grid;
   grid-auto-flow: column;
 }
@@ -141,18 +164,19 @@ nav .admin-buttons button {
   font-weight: bold;
   padding: 0.5rem 1.4em;
   color: white;
-  background-color: blue;
+  background-color: var(--blue);
   border-radius: 1em;
 }
 
-main > .container {
-  box-shadow: inset 0px 4px 3px 0px gray;
-  background-color: lightgrey;
+main > .project-box {
+  box-shadow: inset 0px 4px 3px 0px var(--gray);
+  background-color: var(--gray);
 }
 
 .dashboard {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  gap: 1em;
 }
 
 .project-grid {
@@ -161,21 +185,25 @@ main > .container {
   gap: 1em;
 }
 
+.dashboard h4 {
+  font-weight: bolder;
+  margin: 0.6em 0;
+}
+
 .card {
   padding: 1.5em;
   background-color: white;
-  border-left: peachpuff solid .4em;
-  border-radius: .5em;
-  /* width: min(70ch, 100% - 2rem); */
+  border-left: var(--yellow) solid 0.4em;
+  border-radius: 0.5em;
 }
 
-.card h5 {
-  font-weight: bolder;
+.dashboard h5 {
+  font-weight: bold;
+  margin-bottom: 0.1em;
 }
 
-.card p {
-  color: gray;
-  font-size: .8rem;
+.dashboard p {
+  font-size: 0.8rem;
   font-weight: lighter;
 }
 
@@ -185,5 +213,66 @@ main > .container {
 }
 
 .card .project-buttons svg {
-  margin: 0 .6em;
+  margin: 0 0.6em;
+}
+
+.side {
+  display: grid;
+  gap: 1em;
+}
+
+.side .background-box {
+  padding: 2em;
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+.side .anounce {
+  height: 350px;
+  overflow: hidden;
+  --max-lines: 4;
+  position: relative;
+  max-height: calc(1rem * var(--max-lines));
+  overflow: hidden;
+  padding-right: 0.98rem; /* space for ellipsis */
+}
+
+.anounce::before {
+  color: var(--dark-gray);
+  position: absolute;
+  content: "...";
+  inset-block-end: 0; /* "bottom" */
+  inset-inline-end: 0; /* "right" */
+}
+.anounce::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0; /* "right" */
+  width: 1rem;
+  height: 1rem;
+  background: white;
+}
+
+.side .anounce h5 {
+  font-size: 0.9rem;
+}
+
+hr {
+  margin: 1em 0;
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+}
+
+.side .trending {
+  display: grid;
+  gap: 1em;
+}
+
+.side .trending .trend {
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
 }
