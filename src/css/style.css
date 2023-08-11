@@ -74,7 +74,13 @@ aside h1 svg {
   width: 2.5rem;
 }
 
+aside ul {
+  padding: 1em;
+}
+
 aside ul li {
+  font-size: 1.2rem;
+  font-weight: bold;
   margin-bottom: 1em;
 
   display: grid;
@@ -145,10 +151,14 @@ nav .user-details .user-name {
 }
 
 nav .user-details .user-name p {
+  font-size: .8rem;
+  font-weight: bold;
   align-self: end;
 }
 
 nav .user-details .user-name h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
   align-self: start;
 }
 
@@ -169,7 +179,7 @@ nav .admin-buttons button {
 }
 
 main > .project-box {
-  box-shadow: inset 0px 4px 3px 0px var(--gray);
+  box-shadow: inset 0px 4px 3px 0px lightgray;
   background-color: var(--gray);
 }
 
@@ -193,8 +203,9 @@ main > .project-box {
 .card {
   padding: 1.5em;
   background-color: white;
-  border-left: var(--yellow) solid 0.4em;
+  border-left: var(--yellow) solid 0.5em;
   border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .dashboard h5 {
@@ -225,6 +236,7 @@ main > .project-box {
   padding: 2em;
   background-color: white;
   border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .side .anounce {
@@ -275,4 +287,9 @@ hr {
   grid-auto-flow: column;
   justify-content: start;
   align-items: center;
+}
+
+.side .trending .trend h6 {
+  font-size: .8rem;
+  margin-bottom: .3rem;
 }
